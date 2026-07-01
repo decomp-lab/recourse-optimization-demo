@@ -269,7 +269,10 @@ end
 
 if abspath(PROGRAM_FILE) == @__FILE__
     data_dir = joinpath(@__DIR__, "inventory_example_data")
-    scenarios = collect(0:8)
+    # Small default instance for reproducibility.
+    scenarios = [0, 1]
+    # Larger/full instance for decomposition experiments:
+    # scenarios = collect(0:8)
 
     built = build_extensive_model(data_dir, scenarios)
 
