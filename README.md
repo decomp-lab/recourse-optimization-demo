@@ -28,3 +28,5 @@ using Pkg
 Pkg.activate(".")
 Pkg.instantiate()
 ```
+By default, the script builds a small two-scenario instance using scenarios `[0, 1]`. 
+The data directory contains additional scenarios; edit the `scenarios` line in `OptBMExtensive.jl` to build a larger instance.
